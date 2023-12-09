@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    padding: 14px;
+    float: left;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.sub-menu li {
+    display: block;
+}
+
+.nav-list li:hover .sub-menu {
+    display: block;
+}
+
+.content {
+    padding: 20px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: #333;
+        z-index: 1;
+    }
+
+    .nav-list.show {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-list li {
+        display: block;
+        text-align: center;
+        margin: 0;
+    }
+
+    .sub-menu {
+        position: static;
+        background-color: #333;
+        box-shadow: none;
+        display: block;
+    }
+}
+#facebook-logo, #gmail-logo {
+    width: 20px; /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
+    margin-right: 5px;
+}
